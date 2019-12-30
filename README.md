@@ -4,7 +4,7 @@ Tianyuan Zhang
 
 Weiyi Wu
 
-This is a simple web project name Billiard Club Review.
+This is a simple web project name Billiard Clubs Review.
 
 An easy way to browse our website is using my domain name:
 
