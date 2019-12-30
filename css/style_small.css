@@ -1,0 +1,259 @@
+a {
+    text-decoration: none
+}
+
+
+/* Some adjustment for small sized screen  */
+
+.menu {
+    background-color: rgba(224, 240, 250, 0.6);
+    text-align: center;
+    font-family: cursive;
+    font-size: 60px;
+    color: rgb(69, 69, 69);
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    left: 3px;
+    height: 110px;
+    padding: 20px;
+}
+
+.menu a:hover {
+    color: black
+}
+
+.parent-container {
+    text-align: center;
+    margin-top: -35px;
+}
+
+.parent-container .search-container {
+    display: inline;
+    text-align: center;
+    border: none;
+    vertical-align: middle;
+    -webkit-appearance: none;
+}
+
+.parent-container .search-container input[type=text] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+    -webkit-appearance: none;
+    border-radius: 0;
+    height: 30px;
+    width: 20vw;
+    vertical-align: middle;
+    border: none;
+}
+
+.parent-container .search-container button {
+    color: #00838F;
+    margin-left: -17px;
+    height: 30px;
+    background: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    vertical-align: middle;
+    border: none;
+    cursor: pointer;
+}
+
+.parent-container .dropdown {
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    border: none;
+    vertical-align: middle;
+}
+
+.parent-container .dropdown .dropbtn {
+    font-size: 16px;
+    width: 20vw;
+    height: 30px;
+    font-family: sans-serif;
+    outline: none;
+    color: rgb(69, 69, 69);
+    padding: 6px;
+    background-color: white;
+    border: none;
+    vertical-align: middle;
+}
+
+.parent-container .dropdown:hover .dropbtn {
+    background-color: powderblue;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 80px;
+    Background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #00838F;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* This use the small sized picture as background for mobile devices */
+
+
+/* Make it scrollable to fit in mobile phone screen */
+
+body {
+    background: url("background_image_small.jpg");
+    height: 170%;
+    width: 96%;
+    background-size: cover;
+    position: absolute;
+    overflow-y: auto;
+}
+
+.add-object-button {
+    position: fixed;
+    bottom: 110px;
+    right: 5vw;
+    border: none;
+    color: black;
+    background: transparent;
+    padding: none;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: rgba(224, 240, 250, 0.6);
+    left: 0;
+    color: black;
+    bottom: 0;
+    height: 100px;
+    text-align: left;
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    bottom: 3px;
+    right: 3px;
+    left: 3px;
+    overflow: hidden;
+}
+
+.result-container {
+    font-family: Verdana;
+    border-radius: none;
+    padding: 50px;
+    background-color: rgba(224, 240, 250, 0.6);
+    text-align: center;
+    height: 400px;
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    overflow: scroll;
+}
+
+.list-view-button {
+    font-size: 18px;
+    position: absolute;
+    right: 5vw;
+    bottom: 20vh;
+    padding: none;
+}
+
+.result-container-list {
+    font-family: Verdana;
+    border-radius: none;
+    padding: 50px;
+    background-color: rgba(224, 240, 250, 0.6);
+    text-align: center;
+    height: 400px;
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    overflow: scroll;
+}
+
+.result-container .table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+
+tr:hover {
+    background-color: white;
+}
+
+.map-view-button {
+    font-size: 18px;
+    position: absolute;
+    right: 5vw;
+    bottom: 20vh;
+    padding: none;
+}
+
+.Sign-register-container {
+    border-radius: 30px;
+    padding: 50px;
+    background-color: rgba(224, 240, 250, 0.6);
+    text-align: center;
+    height: 400px;
+    width: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+
+.Sign-register-container. input[type=text],
+.Sign-register-container. input[type=password] {
+    width: 30%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: white;
+}
+
+.Sign-register-container. input[type=text]:focus,
+.Sign-register-container. input[type=password]:focus {
+    background-color: lightskyblue;
+    outline: none;
+}
+
+div.username-textbox-gap {
+    line-height: 60%;
+}

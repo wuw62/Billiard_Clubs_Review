@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>6ww3 Assignment3</title>
+
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+
+    <!--This is for responsive page ajustment-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Use different css files for different screen size-->
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)" href="css/style_small.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px) and (orientation:landscape)" href="css/style.css" />
+</head>
+
+<body>
+    <!--This is head also menu navigation bar-->
+    <div class="menu">
+        <div>
+            <a href="index.html">allUsee</a>
+            <div class="parent-container">
+                <div class="dropdown">
+                    <a href='signin_page.html'>
+                        <button class="dropbtn" onclick="window.location.href('signin_page.html')">
+                            Signin/up
+                        </button>
+                    </a>
+                    <!--Search container box-->
+                </div>
+                <form class="search-container" action="">
+                    <input type="text" placeholder="Search.." name="search">
+                    <a href='search_result_listview_page.html'>
+                        <button type="button" onclick="window.location.href('search_result_listview_page.html')"><i
+                                class="fa fa-search" title="search"></i></button>
+                    </a>
+                </form>
+                <!--Dropdown button implemented and dropdown icon is inserted here-->
+                <div class="dropdown">
+                    <button class="dropbtn">Rating
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">name</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--We used this type of container for submission as same as sign or register container here, a button for users to upload object with images and videos is provided-->
+    <div class="Sign-register-container ">
+        <form action="/php/submit.php" method="post" enctype="multipart/form-data">
+            <h1 style='font-size:20px; margin-top: -38px'>Post your own object</h1>
+
+            <!--These button is for users to submit image and video, and text inputs-->
+            <div><button style='font-size:10px' onclick="getFile('upImageFile')" id="upImageFileButton">Upload Image <i class='fa fa-camera-retro'></i></button></div>
+            <!--Hide the input component, use a button istead (above)-->
+            <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upImageFile" type="file" name="image" onchange="sub(this, 'upImageFileButton')" /></div>
+            <div><button style='font-size:10px' onclick="getFile('upVideoFile')" id="upVideoFileButton">Upload Video <i class='fa fa-film'></i></button></div>
+            <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upVideoFile" type="file" name="video" onchange="sub(this, 'upVideoFileButton')" /></div>
+            <div class="username-textbox-gap">
+                <p>Object name</p>
+                <input type="text" name="objectname" required>
+            </div>
+            <div class="username-textbox-gap">
+                <p>Address</p>
+                <input type="text" name="address" required>
+            </div>
+            <!--Input box id added for geolocation below-->
+            <div class="username-textbox-gap">
+                <p>Latitude and Longitude</p>
+                <input type="coordinate" name="latitude" id="Latitude" required>
+                <input type="coordinate" name="longitude" id="Longitude" required>
+            </div>
+            <div>
+                <script>
+                    var x = document.getElementById("Latitude");
+                    var y = document.getElementById("Longitude");
+                </script>
+                <button onclick="getLocation(x,y)">Use my current coordinate</button>
+
+            </div>
+            <div class="username-textbox-gap">
+                <p>description</p>
+                <input type="text" name="description" required style="height:70px">
+            </div>
+
+            <br>
+            <hr>
+            <input type="submit" value="submit" name="submit">
+        </form>
+
+    </div>
+
+    <!--This is footer-->
+    <div class="footer">
+        <p>Copyright 2019</p>
+        <p>Contact information: wuw62@mcmaster.ca and zhatiayua59@gmail.com</p>
+    </div>
+</body>
+
+</html>

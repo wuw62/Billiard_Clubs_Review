@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>6ww3 Assignment1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <link href="css/style.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1000px)" href="css/style_small.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1000px) and (orientation:landscape)" href="css/style.css" />
+</head>
+
+<body>
+
+    <div class="menu">
+        <div>
+            <a href="index.html">allUsee</a>
+            <div class="parent-container">
+                <div class="dropdown">
+                    <a href='signin_page.html'>
+                        <button class="dropbtn" onclick="window.location.href('signin_page.html')">
+                        Signin/up
+                    </button>
+                    </a>
+                </div>
+                <form class="search-container" action="">
+                    <input type="text" placeholder="Search.." name="search">
+                    <a href='search_result_listview_page.html'>
+                        <button type="button" onclick="window.location.href('search_result_listview_page.html')"><i
+                            class="fa fa-search" title="search"></i></button>
+                    </a>
+                </form>
+                <div class="dropdown">
+                    <button class="dropbtn">Rating
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                    <div class="dropdown-content">
+                        <a href="#">name</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Sign-register-container ">
+        <h1>Sign in for the fun</h1>
+
+        <div class="username-textbox-gap">
+            <p>username</p>
+
+            <input type="text" name="username" required>
+        </div>
+        <br>
+        <div class="username-textbox-gap">
+            <p>password</p>
+            <input type="password" name="password" required>
+        </div>
+        <br>
+        <p><a href="register_page.html" target="">Don't have an account? Register Here.</a></p>
+
+        <br>
+        <hr>
+        <button type="submit" class="register-button">Sign in</button>
+
+    </div>
+
+    <div class="footer">
+        <p>Copyright © 2019</p>
+        <p>Contact information: wuw62@mcmaster.ca and zhatiayua59@gmail.com</p>
+    </div>
+</body>
+
+</html>

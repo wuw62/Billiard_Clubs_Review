@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>6ww3 Assignment1</title>
+
+    <!--This is for responsive page ajustment-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Use different css files for different screen size-->
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)" href="css/style_small.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px) and (orientation:landscape)" href="css/style.css" />
+
+</head>
+
+<body>
+
+    <!--This is head also menu navigation bar-->
+    <div class="menu">
+
+        <div>
+            <a href="index.html">
+                <!-- Two different logo images used for the standard resolution deisplay and high-DPI 2x resolution display -->
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="Logo_big.png">
+                    <source media="(max-width: 1200px)" srcset="Logo_small.png">
+                    <img src="Logo_small.png" alt="allUseelogo" style="width: 220px; height: 70px">
+                </picture>
+            </a>
+            <div class="parent-container">
+
+                <!--For signin/signup button we used same style as the dropdown button here-->
+                <div class="dropdown">
+                    <a href='signin_page.html'>
+
+                        <!--Style the signin/signup button and implement the button for link to the signin/signup page-->
+                        <button class="dropbtn" onclick="window.location.href('signin_page.html')">
+                            Signin/up
+                        </button>
+                    </a>
+                </div>
+
+                <!--Search container box-->
+                <form class="search-container" action="">
+                    <input type="text" placeholder="Search.." name="search">
+                    <a href='search_result_listview_page.php'>
+                        <button type="button" onclick="window.location.href('search_result_listview_page.php')"><i
+                                class="fa fa-search" title="search"></i></button>
+                    </a>
+                </form>
+
+                <!--Dropdown button implemented and dropdown icon is inserted here-->
+                <div class="dropdown">
+                    <button class="dropbtn">Rating
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+
+                    <!--We can choose sort by rating or by the alphabical order-->
+                    <div class="dropdown-content">
+                        <a href="#">name</a>
+                    </div>
+                </div>
+
+                <!--This button is added link to mapview page which allow the users to search based on their locations-->
+                <div>
+                    <a href="search_result_mapview.html">
+                        <button type="button" onclick="window.location.href('search_result_mapview.html')">
+                        See Nearby
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--This button with a plus circle icon here for users post new object, and the button link to submission page-->
+    <div>
+
+        <a href='submission_page.html'>
+            <button class="add-object-button" onclick="window.location.href('submission_page.html')"><i
+                    class="fa fa-plus-circle"></i></button></a>
+    </div>
+
+    <!--This is footer-->
+    <div class="footer">
+        <p>Copyright 2019</p>
+        <p>Contact information: wuw62@mcmaster.ca and zhatiayua59@gmail.com</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>6ww3 Assignment1</title>
+
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIuRRCRNwwXqIu2aa4dv12L2q706AdEBU&callback=initmap"
+        async defer></script>
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+    <!--This is for responsive page ajustment-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Use different css files for different screen size-->
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1200px)" href="css/style_small.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1200px) and (orientation:landscape)"
+        href="css/style.css" />
+
+</head>
+
+<body onload="initMap()">
+    <!--This is head also menu navigation bar-->
+    <div class="menu">
+        <div>
+            <a href="index.html">allUsee</a>
+            <div class="parent-container">
+                <div class="dropdown">
+                    <a href='signin_page.html'>
+                        <button class="dropbtn" onclick="window.location.href('signin_page.html')">
+                            Signin/up
+                        </button>
+                    </a>
+                </div>
+                <!--Search container box-->
+                <form class="search-container" action="">
+                    <input type="text" placeholder="Search.." name="search">
+                    <a href='search_result_listview_page.html'>
+                        <button type="button" onclick="window.location.href('search_result_listview_page.html')"><i
+                                class="fa fa-search" title="search"></i></button>
+                    </a>
+                </form>
+                <!--Dropdown button implemented and dropdown icon is inserted here-->
+                <div class="dropdown">
+                    <button class="dropbtn">Rating
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">name</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--This is one sample of the searched object in container, with name address ratings, image and video provided-->
+    <div class="result-container-list">
+        <h3 style=color:Black;>Steel City Billiards</h3>
+
+        <div>
+            1829 Main St W, Hamilton, ON L8S 1H6
+            <br> Rating: 4.0/5.0 <img src="RatingStarCheck.png"><img src="RatingStarCheck.png"><img
+                src="RatingStarCheck.png"><img src="RatingStarCheck.png"><img src="RatingStarUncheck.png">
+        </div>
+
+        <div id="map" style="width: 900px; height: 330px;"> </div>
+
+        <br>
+        <div>
+            <!--This is  two different images for standard resolution deisplay and high-DPI 2x resolution display -->
+            <picture>
+                <source media="(min-width: 1200px)" srcset="Steel_City_Billiards1_2x.png">
+                <source media="(max-width: 1200px)" srcset="Steel_City_Billiards1.png">
+                <img src="Steel_City_Billiards1_2x.png" alt="Image_of_Steel_City_Billiards1" style="width:auto;">
+            </picture>
+        </div>
+        <br>
+        <div>
+            <video width="480" height="240" controls>
+                <source src="sample_video.mp4" type="video/mp4">
+                Your browser does not support the video.
+            </video>
+        </div>
+        <hr>
+        <div>
+
+            <div>
+                <p style="color:Black;font-size:30px"><b>Customer Reviews</b></p>
+            </div>
+
+
+
+
+
+
+            <script>
+                function myFunction(index) {
+                    //   document.getElementById("UserRating").submit();
+                    var ratings = [document.getElementById("c1"), document.getElementById("c2"), document.getElementById("c3"), document.getElementById("c4"), document.getElementById("c5")]
+                    for (i = 0; i < 5; i++) {
+                        ratings[i].value = 0;
+                    }
+
+                    for (i = 0; i < index; i++) {
+                        ratings[i].value = 1;
+                    }
+
+                }
+            </script>
+
+
+
+
+
+            <div>
+                <form action="submit.php" id="usrnewcommentform" method="post" onsubmit="return PostData()">
+                    <!-- User Name: <input type="text" id="yhusername" name="usrname">
+
+                    <br> -->
+
+                    <!--This is 5 rating Radio stars-->
+                    <div class="RatingBox">
+                        <span class="star-rating star-5">
+
+                            <input action="/action_page.php" type="radio" name="ratingone" id="c1"
+                                onclick="myFunction(1)"><i></i>
+                            <input action="/action_page.php" type="radio" name="ratingtwo" id="c2"
+                                onclick="myFunction(2)"><i></i>
+                            <input action="/action_page.php" type="radio" name="ratingthree" id="c3"
+                                onclick="myFunction(3)"><i></i>
+                            <input action="/action_page.php" type="radio" name="ratingfour" id="c4"
+                                onclick="myFunction(4)"><i></i>
+                            <input action="/action_page.php" type="radio" name="ratingfive" id="c5"
+                                onclick="myFunction(5)"><i></i>
+                        </span>
+                    </div>
+                    <br>
+                    <!--This is textbox included in form-->
+                    <textarea rows="10" cols="80" id="userNcomment" name="usernewcomment" form="usrnewcommentform"
+                        placeholder="Write your reviews here..."></textarea>
+
+                    <br>
+                    <!-- <input type="submit" id="submitButton" name="submitButton" value="Submit" onclick="SubmitNewReview()" > -->
+                </form>
+
+                <button type= "submit" value="Submit" onclick="SubmitNewReview()">Submit Rating and Review</button>
+
+
+                <script type='text/javascript'>
+                    function SubmitNewReview() {
+                        var userNcomment = document.getElementById('userNcomment').value;
+                        // var yonghumin = document.getElementById('yhusername').value;
+                        var table = document.getElementById("myTable");
+                        var row = table.insertRow(0);
+                        var cell1 = row.insertCell(0);
+                        var cell2 = row.insertCell(1);
+                        cell1.innerHTML = "User ID Name";    
+                        cell2.innerHTML = userNcomment;
+                    }
+
+                    /* attach a submit handler to the form */
+                    $("#usrnewcommentform").submit(function (event) {
+
+                        /* stop form from submitting normally */
+                        event.preventDefault();
+
+                        /* get the action attribute from the <form action=""> element */
+                        var $form = $(this),
+                            url = $form.attr('action');
+
+                        /* Send the data using post with element id name */
+                        var posting = $.post(url, { userNcomment: $('#userNcomment').val() });
+
+                        /* Alerts the results */
+                        posting.done(function (data) {
+                            alert('success');
+
+                        });
+                    });
+                    /*When form submitted page doesnt go away*/
+                    function PostData() {
+                        $.ajax({
+                            type: "POST",
+                            url: "post.go",
+                            data: "",
+                            success: function (msg) {
+                            }
+                        });
+                        return false;
+                    }
+
+                </script>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <table id="myTable">
+                <tr class="border_bottom">
+                    <td width="10%">John Smith</td>
+                    <td width="90%">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </td>
+                </tr>
+
+                <tr class="border_bottom">
+                    <td>Jane Doe</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    </td>
+                </tr>
+                <tr class="border_bottom">
+                    <td>David Johnson</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </td>
+                </tr>
+
+
+            </table>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!--The button made for click and link to mapview-->
+    <a href="search_result_mapview.html">
+        <button class="map-view-button">change to map view <i class='fa fa-map'
+                onclick="window.location.href('search_result_mapview.html')"></i></button>
+    </a>
+    <!--This is footer-->
+    <div class="footer">
+        <p>Copyright 2019</p>
+        <p>Contact information: wuw62@mcmaster.ca and zhatiayua59@gmail.com</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,425 @@
+/* This is for getting rid of the underline for website name */
+
+a {
+    text-decoration: none
+}
+
+
+/* This is style the nevigation menu */
+
+.menu {
+    background-color: rgba(224, 240, 250, 0.6);
+    text-align: left;
+    font-family: cursive;
+    font-size: 30px;
+    color: rgb(69, 69, 69);
+    position: fixed;
+    top: 7px;
+    right: 7px;
+    left: 7px;
+    height: 70px;
+    padding: 20px;
+}
+
+
+/* When mouse hover here, text logo turns black */
+
+.menu a:hover {
+    color: black
+}
+
+
+/* This is container for navigation items */
+
+.parent-container {
+    float: right;
+}
+
+
+/* This is style for search container in nevigation*/
+
+.parent-container .search-container {
+    display: inline;
+    text-align: center;
+    max-width: 300px;
+    border: none;
+    vertical-align: middle;
+}
+
+
+/* This is style for search container input */
+
+.parent-container .search-container input[type=text] {
+    font-size: 18px;
+    font-family: sans-serif;
+    height: 28px;
+    border: none;
+}
+
+.parent-container .search-container.buttonNearby {
+    font-size: 18px;
+    height: 28px;
+}
+
+
+/* This is style for the search container button */
+
+.parent-container .search-container button {
+    color: #00838F;
+    margin-left: -9px;
+    margin-right: 20px;
+    height: 30px;
+    background: white;
+    font-family: sans-serif;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* This is style for dropdown */
+
+.parent-container .dropdown {
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    border: none;
+    vertical-align: middle;
+}
+
+
+/* This is style for dropdown button */
+
+.parent-container .dropdown .dropbtn {
+    font-size: 16px;
+    width: auto;
+    height: 30px;
+    font-family: sans-serif;
+    outline: none;
+    color: rgb(69, 69, 69);
+    padding: 6px;
+    background-color: white;
+    Margin-right: 20px;
+    border: none;
+}
+
+
+/* This change color for dropdown button when mouse hover on it */
+
+.parent-container .dropdown:hover .dropbtn {
+    background-color: powderblue;
+}
+
+
+/* This is style for dropdown content */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 80px;
+    Background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/* This is style for dropdown text */
+
+.dropdown-content a {
+    color: black;
+    font-family: sans-serif;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* This change color for dropdown content when mouse hover on it */
+
+.dropdown-content a:hover {
+    background-color: #00838F;
+}
+
+
+/* This is block display for dropdown content */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* This is style for body */
+
+body {
+    background: url("background_image.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    overflow: hidden;
+}
+
+
+/* This is style for add object button */
+
+.add-object-button {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    border: none;
+    color: black;
+    background: transparent;
+    padding: none;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+/* This is style for footer */
+
+.footer {
+    background-color: rgba(224, 240, 250, 0.6);
+    left: 0;
+    color: black;
+    bottom: 0;
+    height: 70px;
+    text-align: left;
+    position: fixed;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    bottom: 7px;
+    right: 7px;
+    left: 7px;
+}
+
+
+/* This is style for result container  */
+
+.result-container {
+    font-family: Verdana;
+    border-radius: none;
+    padding: 50px;
+    background-color: rgba(224, 240, 250, 0.6);
+    text-align: center;
+    height: 400px;
+    width: 900px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+
+
+/* This is style for list view button */
+
+.list-view-button {
+    font-size: 18px;
+    position: fixed;
+    right: 50px;
+    bottom: 130px;
+    padding: none;
+}
+
+
+/* This is style for contents in result container */
+
+.result-container-list {
+    font-family: Verdana;
+    border-radius: none;
+    padding: 50px;
+    background-color: rgba(224, 240, 250, 0.6);
+    text-align: center;
+    height: 400px;
+    width: 900px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    overflow: scroll;
+}
+
+
+/* This style the table in result container */
+
+.result-container .table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+/* This is style for table header and cells */
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+
+
+/* This change the color when mouse hover on it */
+
+tr:hover {
+    background-color: white;
+}
+
+
+/* This is style for map view button */
+
+.map-view-button {
+    font-size: 18px;
+    position: fixed;
+    right: 50px;
+    bottom: 130px;
+    padding: none;
+}
+
+
+/* This is style for sign register container */
+
+.Sign-register-container {
+    border-radius: 30px;
+    padding: 50px;
+    background-color: rgba(224, 240, 250, 0.6);
+    text-align: center;
+    height: 400px;
+    width: 200px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+}
+
+
+/* This is style for container text input box */
+
+.Sign-register-container. input[type=text],
+.Sign-register-container. input[type=password] {
+    width: 30%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: white;
+}
+
+
+/* This is style for sign register container text input box */
+
+.Sign-register-container. input[type=text]:focus,
+.Sign-register-container. input[type=password]:focus {
+    background-color: lightskyblue;
+    outline: none;
+}
+
+
+/* This is for seperation space between username and text box */
+
+div.username-textbox-gap {
+    line-height: 60%;
+}
+
+tr.border_bottom td {
+    border-bottom:1pt solid black;
+  }
+        
+
+
+
+
+
+
+
+
+/* This is style for rating star retrieved from  http://jsfiddle.net/CAVpz/ */
+  .star-rating {
+    font-size: 0;
+    white-space: nowrap;
+    display: inline-block;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjREREREREIiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+    background-size: contain;
+  }
+  .star-rating i {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+    background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkZERjg4IiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+    background-size: contain;
+  }
+  .star-rating input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    opacity: 0;
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    position: relative;
+  }
+  .star-rating input:hover + i,
+  .star-rating input:checked + i {
+    opacity: 1;
+  }
+  .star-rating i ~ i {
+    width: 40%;
+  }
+  .star-rating i ~ i ~ i {
+    width: 60%;
+  }
+  .star-rating i ~ i ~ i ~ i {
+    width: 80%;
+  }
+  .star-rating i ~ i ~ i ~ i ~ i {
+    width: 100%;
+  }
+  ::after,
+  ::before {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .star-rating.star-5 {width: 250px;}
+  .star-rating.star-5 input,
+  .star-rating.star-5 i {width: 20%;}
+  .star-rating.star-5 i ~ i {width: 40%;}
+  .star-rating.star-5 i ~ i ~ i {width: 60%;}
+  .star-rating.star-5 i ~ i ~ i ~ i {width: 80%;}
+  .star-rating.star-5 i ~ i ~ i ~ i ~i {width: 100%;}
+
+
+
+
+
+/* This is style for rating box */
+.RatingBox {
+    /* float: left; */
+    width: 400px;
+    height: 80px;
+    padding: 40px;
+    margin-left: 14vw;
+    border: 35px #0b0c0c11;
+    background: #0b0c0c11;
+  }
+
+
+
+
